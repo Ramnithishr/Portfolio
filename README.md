@@ -48,147 +48,211 @@ Deploy the Portfolio.
 Upload to GitHub Pages for free hosting.
 
 ## PROGRAM:
+
+## INDEX.HTML
 ```
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Portfolio | Ram</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #0f172a; color: #e5e7eb; }
+  <title>Game Developer Portfolio</title>
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 
-    header h1 { font-size: 3rem; }
-    header span { color: #38bdf8; }
-    header p { margin: 20px 0; color: #9ca3af; }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #38bdf8, #6366f1);
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    section { padding: 80px 10%; }
-
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 50px;
-    }
-
-    .about p {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      color: #cbd5f5;
-    }
-
-    .skills, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #020617;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover { transform: translateY(-10px); }
-
-    .card h3 { margin-bottom: 15px; color: #38bdf8; }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #9ca3af;
-    }
-  </style>
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- HERO -->
   <header>
-    <div>
-      <h1>Hi, I'm <span>RAM</span></h1>
-      <p>Modern Web Developer | UI/UX Lover | Tech Explorer</p>
-      <a href="#projects" class="btn">View My Work</a>
+    <div class="hero">
+      <h1>Hi, I'm <span>Ram</span></h1>
+      <p>Game Developer | Level Designer | Competitive Gamer</p>
+      <a href="#games" class="btn">View My Games</a>
     </div>
   </header>
 
+  <!-- ABOUT -->
   <section class="about">
     <h2>About Me</h2>
     <p>
-      I'm a passionate web developer who loves building modern, fast and user-friendly websites.
-      I focus on clean UI, smooth animations and responsive design.
+      I'm a passionate game developer focused on immersive gameplay,
+      smooth mechanics, and competitive game design.
     </p>
   </section>
 
+  <!-- SKILLS -->
   <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="card"><h3>HTML5</h3><p>Semantic and accessible markup</p></div>
-      <div class="card"><h3>CSS3</h3><p>Modern layouts & animations</p></div>
-      <div class="card"><h3>JavaScript</h3><p>Interactive & dynamic UI</p></div>
-      <div class="card"><h3>React</h3><p>Component-based development</p></div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
+    <h2>Game Skills</h2>
+    <div class="grid">
       <div class="card">
-        <h3>Social Media App</h3>
-        <p>Cross-platform app with chat & notifications.</p>
+        <h3>Unity / Unreal</h3>
+        <p>Game mechanics & physics</p>
       </div>
       <div class="card">
-        <h3>Birthday Website</h3>
-        <p>Aesthetic interactive birthday surprise site.</p>
+        <h3>C# / C++</h3>
+        <p>Gameplay programming</p>
       </div>
       <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>Modern personal portfolio design.</p>
+        <h3>Level Design</h3>
+        <p>Balanced & immersive maps</p>
+      </div>
+      <div class="card">
+        <h3>UI / HUD</h3>
+        <p>Clean in-game interfaces</p>
       </div>
     </div>
   </section>
 
+  <!-- GAMES -->
+  <section id="games">
+    <h2>My Games</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Battle Royale Arena</h3>
+        <p>Fast-paced multiplayer FPS game.</p>
+      </div>
+      <div class="card">
+        <h3>Cyber Runner</h3>
+        <p>Neon cyberpunk endless runner.</p>
+      </div>
+      <div class="card">
+        <h3>Zombie Survival</h3>
+        <p>Wave-based co-op survival game.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>RRR 2026 Ram Nithish. All rights reserved.</p>
+    <p> 212224230219 Ram Nithish | Game Portfolio</p>
   </footer>
 
 </body>
 </html>
+
+```
+## STYLE.CSS
+```
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* HERO */
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  text-shadow: 0 0 20px #38bdf8;
+}
+
+header span {
+  color: #38bdf8;
+}
+
+header p {
+  margin: 20px auto;
+  max-width: 600px;
+  color: #9ca3af;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #020617;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 0 25px rgba(56,189,248,0.6);
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 10%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 50px;
+  color: #38bdf8;
+  text-shadow: 0 0 15px rgba(56,189,248,0.6);
+}
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #cbd5f5;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(2,6,23,0.9);
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 50px rgba(56,189,248,0.6);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #a5f3fc;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+  color: #9ca3af;
+}
 ```
 
 
 ## OUTPUT:
 
-<img width="1893" height="1038" alt="Screenshot 2026-02-02 085309" src="https://github.com/user-attachments/assets/28f6c8e7-dc4d-4feb-88be-9d5116ab9a9d" />
+<img width="1884" height="1032" alt="Screenshot 2026-02-02 090134" src="https://github.com/user-attachments/assets/4c3a0de1-9722-476d-8a2a-b1e9b6dfab45" />
 
+<img width="1880" height="1019" alt="Screenshot 2026-02-02 090154" src="https://github.com/user-attachments/assets/f0023cee-316c-4ed6-9899-6c9874f589c9" />
 
-<img width="1885" height="1038" alt="Screenshot 2026-02-02 085410" src="https://github.com/user-attachments/assets/a51a5769-12cc-4ca6-bd3f-4dcd0f694df9" />
-
-
-<img width="1885" height="1036" alt="Screenshot 2026-02-02 085451" src="https://github.com/user-attachments/assets/c9b17505-4066-48f5-b88a-3988586c7673" />
-
+<img width="1882" height="1027" alt="Screenshot 2026-02-02 090235" src="https://github.com/user-attachments/assets/381409fe-50af-4340-b7eb-75641b619275" />
 
 
 
